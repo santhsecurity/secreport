@@ -1,7 +1,7 @@
 [package]
 exclude = ["target/"]
 name = "secreport"
-version = "0.2.0"
+version = "0.2.1"
 edition = "2021"
 rust-version = "1.85"
 license = "MIT"
@@ -9,7 +9,7 @@ authors = ["Corum Collective LLC <engineering@corumcollective.com>"]
 repository = "https://github.com/santhsecurity/secreport"
 description = "Output formatters for security findings — JSON, JSONL, SARIF, Markdown, Text"
 readme = "README.md"
-keywords = ["security", "sarif", "output", "reporting", "jsonl", "cli"]
+keywords = ["security", "sarif", "reporting", "jsonl", "findings"]
 categories = ["development-tools"]
 
 [dependencies]
