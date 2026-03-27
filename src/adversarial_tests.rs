@@ -1,3 +1,5 @@
+#![allow(clippy::cloned_ref_to_slice_refs, clippy::nonminimal_bool)]
+
 use crate::{emit, render, render_any, Format};
 use secfinding::{Finding, Reportable, Severity};
 

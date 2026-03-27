@@ -1,3 +1,5 @@
+#![allow(clippy::cloned_ref_to_slice_refs)]
+
 use crate::{render, Format};
 use secfinding::{Finding, Severity};
 use std::sync::Arc;
