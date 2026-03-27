@@ -47,7 +47,10 @@ fn adversarial_10k_findings() {
             }
             Format::Sarif => {
                 let parsed: serde_json::Value = serde_json::from_str(&output).unwrap();
-                assert_eq!(parsed["runs"][0]["results"].as_array().unwrap().len(), 10_000);
+                assert_eq!(
+                    parsed["runs"][0]["results"].as_array().unwrap().len(),
+                    10_000
+                );
             }
             Format::Text => {
                 let finding_count = output.matches("Finding #").count();
@@ -55,7 +58,10 @@ fn adversarial_10k_findings() {
             }
             Format::Markdown => {
                 let finding_count = output.matches("\n### ").count();
-                assert_eq!(finding_count, 10_000, "Markdown should render every finding");
+                assert_eq!(
+                    finding_count, 10_000,
+                    "Markdown should render every finding"
+                );
             }
         }
     }

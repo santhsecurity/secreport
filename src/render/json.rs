@@ -47,10 +47,7 @@ pub(crate) fn render_sarif_generic(
     let results: Vec<serde_json::Value> = findings
         .iter()
         .map(|f| {
-            let fingerprint = format!(
-                "{}:{}:{}:{}",
-                f.rule_id, f.target, f.title, f.detail
-            );
+            let fingerprint = format!("{}:{}:{}:{}", f.rule_id, f.target, f.title, f.detail);
             serde_json::json!({
                 "ruleId": f.rule_id,
                 "level": f.sarif_level,
